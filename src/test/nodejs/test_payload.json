@@ -1,0 +1,25 @@
+{
+  "Records": [
+    {
+      "eventID": "1",
+      "eventVersion": "1.0",
+      "dynamodb": {
+        "Keys": { "RecordID": {"S": "2" }
+      },
+      "NewImage": {
+        "RecordID": {"S": "2" },
+        "Username": { "S": "Jane Doe" },
+        "Score": { "N": "100" },
+        "Nickname": { "S": "JaneD" }
+      },
+      "StreamViewType": "NEW_IMAGE",
+      "SequenceNumber": "111",
+      "SizeBytes": 26
+    },
+    "awsRegion": "us-west-2",
+    "eventName": "INSERT",
+    "eventSourceARN": "arn:aws:dynamodb:us-west-2:account-id:table/GameScoreRecords/stream/2015-10-07T00:48:05.899",
+    "eventSource": "aws:dynamodb"
+    }
+  ]
+}
