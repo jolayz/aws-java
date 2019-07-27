@@ -1,3 +1,5 @@
+from pyspark.sql.functions import col
+
 dataset = spark.read.parquet("s3://amazon-reviews-pds/parquet/product_category=Watches/")
 
 dataset.printSchema
