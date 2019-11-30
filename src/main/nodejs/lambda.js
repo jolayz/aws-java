@@ -3,7 +3,7 @@ var AWS = require('aws-sdk');
 var dynamodb = new AWS.DynamoDB();
 
 // update AWS configuration to set region
-AWS.config.update({region : 'us-west-2'});
+AWS.config.update({region : 'us-east-1'});
 
 exports.handler = function(event, context) {
     // Keep track of how many requests are in flight
@@ -19,7 +19,7 @@ exports.handler = function(event, context) {
         // http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_UpdateItem.html
         // Adds the specified value to the item, if attribute does not exist, set the attribute
         var updateItemParams = {
-            TableName: "GameScoresByUser",
+            TableName: "GameScoreByUser",
             Key : { Username : newItemImage.Username },
             UpdateExpression : 'ADD Score :attrValue',
             ExpressionAttributeValues : {':attrValue' : newItemImage.Score}
